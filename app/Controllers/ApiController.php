@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\InviteCode;
+use App\Models\KaguyaConfig;
 use App\Models\KaguyaUserToken;
 use App\Models\Node,App\Models\User;
 use App\Services\Factory,App\Services\Config;
@@ -162,7 +163,7 @@ class ApiController extends BaseController
 	public function serverGetUserNodeBeta($request, $response, $args){
 		$res['status'] = 400;
 		$res['data'] = "";
-		/*
+		
 		if(!isset($request->$request->getQueryParams()['key'])){
 			return $this->echoJson($response,$res);
 		}
@@ -170,14 +171,15 @@ class ApiController extends BaseController
 			$res['status'] = 401;
 			return $this->echoJson($response,$res);
 		}
-		*/
 		//$token = $request->$request->getQueryParams()['token'];
+		if($request->$request->getQueryParams()['key']!=KaguyaConfig::find(1)->content){
+			return $this->echoJson($response,$res);
+		}
 		$token = KaguyaUserToken::where('token',$args['token'])->first();
 		$res2 = $this->serverNode($token->user_id);
 		$res['status'] =200;
 		$res['data'] = $res2['data'];
 		return $this->echoJson($response,$res);
-
 	}
 
 	private function serverNode($userID){
