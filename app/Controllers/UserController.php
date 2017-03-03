@@ -2032,7 +2032,6 @@ public function payhelp()
 				$token->token = $temp_token;
 				$token->save();
 				header('Location: /user/beta/webconfig');
-				die();
 			}
 		}
 		return $this->view()->assign('kaguyaUserToken', $token)->display('user/webconfig.tpl');
