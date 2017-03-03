@@ -2023,12 +2023,12 @@ public function payhelp()
 		if($token==null){
 			$token = new KaguyaUserToken();
 			$token->user_id = $user->id;
-			$token->token = "";
+			$token->token = Tools::genRandomChar(11);
 			$token->save();
 		}
 		if(isset($request->getQueryParams()['action'])){
 			if($request->getQueryParams()['action']=='reset_code'){
-				$temp_token =substr(md5($user->pass.$user->passwd.md5(time())),4,13);
+				$temp_token =Tools::genRandomChar(11);
 				$token->token = $temp_token;
 				$token->save();
 			}
