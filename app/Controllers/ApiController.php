@@ -175,7 +175,9 @@ class ApiController extends BaseController
 		$key0 = KaguyaConfig::where('id',1)->first();
 		$key0=$key0->content;
 		$key1 = $request->getQueryParams()['key'];
-		if($key0==$key1){
+		var_dump($key0);
+		var_dump($key1);
+		if( ""==$key1){
 			echo "ok";
 		}
 		$token = KaguyaUserToken::where('token',$args['token'])->first();
