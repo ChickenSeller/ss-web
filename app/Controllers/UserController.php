@@ -2015,4 +2015,9 @@ public function payhelp()
 		$logs->setPath('/user/detect/log');
 		return $this->view()->assign('logs',$logs)->display('user/detect_log.tpl');
 	}
+
+	public function showWebConfigBeta($request, $response, $args){
+		$user = Auth::getUser();
+		return $user;
+	}
 }
