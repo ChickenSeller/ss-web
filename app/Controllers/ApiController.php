@@ -177,9 +177,6 @@ class ApiController extends BaseController
 		$key1 = $request->getQueryParams()['key'];
 		var_dump($key0);
 		var_dump($key1);
-		if( ""==$key0){
-			echo "ok";
-		}
 		$token = KaguyaUserToken::where('token',$args['token'])->first();
 		$res2 = $this->serverNode($token->user_id);
 		$res['status'] =200;
