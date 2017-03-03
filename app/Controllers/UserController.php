@@ -2018,6 +2018,6 @@ public function payhelp()
 
 	public function showWebConfigBeta($request, $response, $args){
 		$user = Auth::getUser();
-		return $user;
+		return "xxx";
 	}
 }
