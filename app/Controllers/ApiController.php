@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\InviteCode;
+use App\Models\KaguyaUserToken;
 use App\Models\Node,App\Models\User;
 use App\Services\Factory,App\Services\Config;
 use App\Utils\Tools,App\Utils\Hash,App\Utils\Helper;
@@ -157,6 +158,91 @@ class ApiController extends BaseController
 		$res['data'] = $data;
 		return $this->echoJson($response,$res);
 
+	}
+	public function serverGetUserNodeBeta($request, $response, $args){
+		$res['status'] = 400;
+		$res['data'] = "";
+		if(!isset($request->$request->getQueryParams()['key'])){
+			return $this->echoJson($response,$res);
+		}
+		if(!isset($request->$request->getQueryParams()['token'])){
+			$res['status'] = 401;
+			return $this->echoJson($response,$res);
+		}
+		//$token = $request->$request->getQueryParams()['token'];
+		$token = KaguyaUserToken::where('token',$request->$request->getQueryParams()['token'])->first();
+		$res2 = $this->serverNode($token->user_id);
+		$res['data'] = $res2['data'];
+		return $this->echoJson($response,$res);
+
+	}
+
+	private function serverNode($userID){
+		$user = User::find($userID);
+		$nodes = Node::where('sort', 0)->where("type","1")->where(
+			function ($query) use ($user) {
+				$query->where("node_group","=",$user->node_group)
+					->orWhere("node_group","=",0);
+			}
+		)->get();
+
+		$mu_nodes = Node::where('sort',9)->where('node_class','<=',$user->class)->where("type","1")->where(
+			function ($query) use ($user) {
+				$query->where("node_group","=",$user->node_group)
+					->orWhere("node_group","=",0);
+			}
+		)->get();
+
+		$temparray=array();
+		foreach($nodes as $node)
+		{
+			if($node->mu_only == 0)
+			{
+				array_push($temparray,array("remarks"=>$node->name,
+					"server"=>$node->server,
+					"server_port"=>$user->port,
+					"method"=>($node->custom_method==1?$user->method:$node->method),
+					"obfs"=>str_replace("_compatible","",((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin'))?$user->obfs:"plain")),
+					"obfsparam"=>((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin'))?$user->obfs_param:""),
+					"remarks_base64"=>base64_encode($node->name),
+					"password"=>$user->passwd,
+					"tcp_over_udp"=>false,
+					"udp_over_tcp"=>false,
+					"group"=>Config::get('appName'),
+					"protocol"=>str_replace("_compatible","",((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin'))?$user->protocol:"origin")),
+					"obfs_udp"=>false,
+					"enable"=>true));
+			}
+
+			if($node->custom_rss == 1)
+			{
+				foreach($mu_nodes as $mu_node)
+				{
+					$mu_user = User::where('port','=',$mu_node->server)->first();
+					$mu_user->obfs_param = $user->getMuMd5();
+
+					array_push($temparray,array("remarks"=>$node->name."- ".$mu_node->server." 端口单端口多用户",
+						"server"=>$node->server,
+						"server_port"=>$mu_user->port,
+						"method"=>$mu_user->method,
+						"group"=>Config::get('appName'),
+						"obfs"=>str_replace("_compatible","",((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($mu_user->obfs=='plain'&&$mu_user->protocol=='origin'))?$mu_user->obfs:"plain")),
+						"obfsparam"=>((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($mu_user->obfs=='plain'&&$mu_user->protocol=='origin'))?$mu_user->obfs_param:""),
+						"remarks_base64"=>base64_encode($node->name."- ".$mu_node->server." 端口单端口多用户"),
+						"password"=>$mu_user->passwd,
+						"tcp_over_udp"=>false,
+						"udp_over_tcp"=>false,
+						"protocol"=>str_replace("_compatible","",((Config::get('enable_rss')=='true'&&$node->custom_rss==1&&!($mu_user->obfs=='plain'&&$mu_user->protocol=='origin'))?$mu_user->protocol:"origin")),
+						"obfs_udp"=>false,
+						"enable"=>true));
+				}
+			}
+		}
+
+		$res['ret'] = 1;
+		$res['msg'] = "ok";
+		$res['data'] = $temparray;
+		return $res;
 	}
 
 }
