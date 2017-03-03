@@ -38,8 +38,8 @@
       <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="176" column="18" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+            <state relative-caret-position="325">
+              <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -60,8 +60,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="2021" column="60" selection-start-line="2021" selection-start-column="60" selection-end-line="2021" selection-end-column="60" />
+            <state relative-caret-position="244">
+              <caret line="2002" column="49" selection-start-line="2002" selection-start-column="23" selection-end-line="2002" selection-end-column="49" />
               <folding>
                 <element signature="e#35#66#0#PHP" expanded="true" />
                 <element signature="e#951#14964#0#PHP" expanded="false" />
@@ -373,7 +373,7 @@
       <updated>1488370537924</updated>
       <workItem from="1488370541095" duration="2404000" />
       <workItem from="1488546378482" duration="10504000" />
-      <workItem from="1488564603785" duration="1116000" />
+      <workItem from="1488564603785" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1488547387164</created>
@@ -529,11 +529,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488565669807</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="test">
+      <created>1488565732815</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1488565732815</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14024000" />
+    <option name="totallyTimeSpent" value="14153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
@@ -784,6 +791,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
           <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -845,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="2021" column="60" selection-start-line="2021" selection-start-column="60" selection-end-line="2021" selection-end-column="60" />
+        <state relative-caret-position="244">
+          <caret line="2002" column="49" selection-start-line="2002" selection-start-column="23" selection-end-line="2002" selection-end-column="49" />
           <folding>
             <element signature="e#35#66#0#PHP" expanded="true" />
             <element signature="e#951#14964#0#PHP" expanded="false" />
@@ -867,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="176" column="18" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+        <state relative-caret-position="325">
+          <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
           <folding />
         </state>
       </provider>
