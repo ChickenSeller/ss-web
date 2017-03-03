@@ -162,6 +162,7 @@ class ApiController extends BaseController
 	public function serverGetUserNodeBeta($request, $response, $args){
 		$res['status'] = 400;
 		$res['data'] = "";
+		/*
 		if(!isset($request->$request->getQueryParams()['key'])){
 			return $this->echoJson($response,$res);
 		}
@@ -169,9 +170,11 @@ class ApiController extends BaseController
 			$res['status'] = 401;
 			return $this->echoJson($response,$res);
 		}
+		*/
 		//$token = $request->$request->getQueryParams()['token'];
-		$token = KaguyaUserToken::where('token',$request->$request->getQueryParams()['token'])->first();
+		$token = KaguyaUserToken::where('token',$args['token'])->first();
 		$res2 = $this->serverNode($token->user_id);
+		$res['status'] =200;
 		$res['data'] = $res2['data'];
 		return $this->echoJson($response,$res);
 
