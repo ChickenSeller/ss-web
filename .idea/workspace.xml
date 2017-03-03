@@ -38,8 +38,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="2019" column="56" selection-start-line="2019" selection-start-column="56" selection-end-line="2019" selection-end-column="56" />
+            <state relative-caret-position="638">
+              <caret line="2026" column="27" selection-start-line="2026" selection-start-column="27" selection-end-line="2026" selection-end-column="27" />
               <folding>
                 <element signature="e#35#66#0#PHP" expanded="true" />
                 <element signature="e#951#14964#0#PHP" expanded="false" />
@@ -331,7 +331,7 @@
       <option name="presentableId" value="Default" />
       <updated>1488370537924</updated>
       <workItem from="1488370541095" duration="2404000" />
-      <workItem from="1488546378482" duration="1927000" />
+      <workItem from="1488546378482" duration="2247000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1488547387164</created>
@@ -354,11 +354,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488548163179</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1488548335362</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488548335362</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4331000" />
+    <option name="totallyTimeSpent" value="4651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -553,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="2019" column="56" selection-start-line="2019" selection-start-column="56" selection-end-line="2019" selection-end-column="56" />
+        <state relative-caret-position="638">
+          <caret line="2026" column="27" selection-start-line="2026" selection-start-column="27" selection-end-line="2026" selection-end-column="27" />
           <folding>
             <element signature="e#35#66#0#PHP" expanded="true" />
             <element signature="e#951#14964#0#PHP" expanded="false" />

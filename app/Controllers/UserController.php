@@ -2020,7 +2020,12 @@ public function payhelp()
 	public function showWebConfigBeta($request, $response, $args){
 		$user = Auth::getUser();
 		$token = KaguyaUserToken::where('user_id',$user->id)->first();
-
+		if($token==null){
+			$token = new KaguyaUserToken();
+			$token->user_id = $user->id;
+			$token->token = "";
+			$token->save();
+		}
 		return json_encode($token);
 	}
 }
