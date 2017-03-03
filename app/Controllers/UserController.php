@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\KaguyaUserToken;
 use App\Services\Auth;
 use App\Models\Node,App\Models\TrafficLog,App\Models\InviteCode,App\Models\CheckInLog,App\Models\Ann,App\Models\Speedtest,App\Models\Shop,App\Models\Coupon,App\Models\Bought,App\Models\Ticket;
 use App\Services\Config;
@@ -2018,6 +2019,8 @@ public function payhelp()
 
 	public function showWebConfigBeta($request, $response, $args){
 		$user = Auth::getUser();
-		return json_encode($user);
+		$token = KaguyaUserToken::where('user_id',$user->id)->first();
+
+		return json_encode($token);
 	}
 }
