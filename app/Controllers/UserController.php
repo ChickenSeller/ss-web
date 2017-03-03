@@ -2026,6 +2026,13 @@ public function payhelp()
 			$token->token = "";
 			$token->save();
 		}
-		return json_encode($token);
+		if(isset($request->getQueryParams()['action'])){
+			if($request->getQueryParams()['action']=='reset_code'){
+				$temp_token =substr(md5($user->pass.$user->passwd.md5(time())),4,13);
+				$token->token = $temp_token;
+				$token->save();
+			}
+		}
+		return $this->view()->assign('kaguyaUserToken', $token)->display('user/webconfig.tpl');
 	}
 }
