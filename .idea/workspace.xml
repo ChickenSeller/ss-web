@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="178" column="24" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+              <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -373,7 +373,7 @@
       <updated>1488370537924</updated>
       <workItem from="1488370541095" duration="2404000" />
       <workItem from="1488546378482" duration="10504000" />
-      <workItem from="1488564603785" duration="1824000" />
+      <workItem from="1488564603785" duration="1861000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1488547387164</created>
@@ -592,11 +592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488566405204</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="test">
+      <created>1488566445307</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1488566445307</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14732000" />
+    <option name="totallyTimeSpent" value="14769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
@@ -932,7 +939,7 @@
     <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="178" column="24" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+          <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
           <folding />
         </state>
       </provider>
