@@ -182,12 +182,12 @@ class ApiController extends BaseController
 
 	private function serverNode($userID){
 		$user = User::find($userID);
-		$nodes = Node::where('sort', 0)->where("type","1")->where(
+		$nodes = Node::where(
 			function ($query) use ($user) {
 				$query->where("node_group","=",$user->node_group)
 					->orWhere("node_group","=",0);
 			}
-		)->get();
+		)->where('type', 1)->where("node_class","<=",$this->user->class)->orderBy('name')->get();
 
 		$mu_nodes = Node::where('sort',9)->where('node_class','<=',$user->class)->where("type","1")->where(
 			function ($query) use ($user) {
