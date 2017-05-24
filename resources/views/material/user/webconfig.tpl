@@ -16,8 +16,10 @@
                                     <p class="card-heading">注意！</p>
 
                                     <p>本页面中的功能为实验性功能，仅供测试！</p>
-
                                     <p>本站不对因为使用本页面中的功能造成的任何后果负责！</p>
+                                    <p>本功能需要专用Shadowsocks客户端的支持，仅支持Windows平台，并且不支持ssr</p>
+                                    <p>客户端和教程文档下载地址在这里：<a href="https://beta.ssvip.lol/download/Shadowsocks/shadowsocks.zip">点击下载</a> </p>
+                                    <p>有任何意见和建议欢迎在群里反馈</p>
                                 </div>
 
                             </div>
