@@ -43,7 +43,7 @@
                                                 <tbody>
                                                 <tr>
                                                     <td><b>{$kaguyaUserToken->user_id}</b></td>
-                                                    <td><code>https://beta.ssvip.ml/api/beta/{$kaguyaUserToken->token}</code>
+                                                    <td><code>https://ss.yanlei.me/ssvip/{$kaguyaUserToken->token}</code>
                                                     </td>
                                                     <td><a href="/user/beta/webconfig?action=reset_code">重置链接</a></td>
                                                 </tr>
