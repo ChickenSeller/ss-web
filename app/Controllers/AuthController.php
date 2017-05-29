@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\InviteCode;
+use App\Models\KaguyaUserToken;
 use App\Services\Config;
 use App\Utils\Check;
 use App\Utils\Tools;
@@ -108,7 +109,8 @@ class AuthController extends BaseController
         Auth::login($user->id,$time);
         $rs['ret'] = 1;
         $rs['msg'] = "欢迎回来";
-		
+        $UserToken = KaguyaUserToken::where('user_id',$user->id)->first();
+		$rs['token'] = $UserToken->token;
 		$loginip=new LoginIp();
 		$loginip->ip=$_SERVER["REMOTE_ADDR"];
 		$loginip->userid=$user->id;
