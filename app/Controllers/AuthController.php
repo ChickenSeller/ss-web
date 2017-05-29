@@ -61,6 +61,7 @@ class AuthController extends BaseController
 			if (!$ret) {
 				$res['ret'] = 0;
 				$res['msg'] = "系统无法接受您的验证结果，请刷新页面后重试。";
+                $res['token'] = "";
 				return $response->getBody()->write(json_encode($res));
 			}
 		}
@@ -71,13 +72,14 @@ class AuthController extends BaseController
         if ($user == null){
             $rs['ret'] = 0;
             $rs['msg'] = "401 邮箱或者密码错误";
+            $rs['token'] = "";
             return $response->getBody()->write(json_encode($rs));
         }
 
         if (!Hash::checkPassword($user->pass,$passwd)){
             $rs['ret'] = 0;
             $rs['msg'] = "402 邮箱或者密码错误";
-			
+            $rs['token'] = "";
 			
 			$loginip=new LoginIp();
 			$loginip->ip=$_SERVER["REMOTE_ADDR"];
@@ -102,6 +104,7 @@ class AuthController extends BaseController
 			if (!$rcode) {
 				$res['ret'] = 0;
 				$res['msg'] = "403 两步验证码错误，如果您是丢失了生成器或者错误地设置了这个选项，您可以尝试重置密码，即可取消这个选项。";
+                $rs['token'] = "";
 				return $response->getBody()->write(json_encode($res));
 			}
 		}
