@@ -113,6 +113,12 @@ class AuthController extends BaseController
         $rs['ret'] = 1;
         $rs['msg'] = "欢迎回来";
         $UserToken = KaguyaUserToken::where('user_id',$user->id)->first();
+        if($UserToken==null){
+            $UserToken = new KaguyaUserToken();
+            $UserToken->user_id = $user->id;
+            $UserToken->token = Tools::genRandomChar(11);
+            $UserToken->save();
+        }
 		$rs['token'] = $UserToken->token;
 		$loginip=new LoginIp();
 		$loginip->ip=$_SERVER["REMOTE_ADDR"];

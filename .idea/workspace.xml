@@ -30,7 +30,7 @@
       <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
+            <state relative-caret-position="713">
               <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
               <folding>
                 <element signature="e#364#770#0#PHP" expanded="false" />
@@ -45,8 +45,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28911">
-              <caret line="2019" column="37" lean-forward="false" selection-start-line="2019" selection-start-column="37" selection-end-line="2019" selection-end-column="37" />
+            <state relative-caret-position="277">
+              <caret line="2020" column="22" lean-forward="false" selection-start-line="2020" selection-start-column="22" selection-end-line="2020" selection-end-column="22" />
               <folding>
                 <element signature="e#35#66#0#PHP" expanded="true" />
                 <element signature="e#951#14964#0#PHP" expanded="false" />
@@ -86,13 +86,13 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1371">
-              <caret line="106" column="34" lean-forward="false" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+            <state relative-caret-position="475">
+              <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
               <folding>
                 <element signature="e#616#896#0#PHP" expanded="false" />
-                <element signature="e#3278#3895#0#PHP" expanded="false" />
-                <element signature="e#3901#5812#0#PHP" expanded="false" />
-                <element signature="e#5818#10811#0#PHP" expanded="false" />
+                <element signature="e#3501#4118#0#PHP" expanded="false" />
+                <element signature="e#4124#6035#0#PHP" expanded="false" />
+                <element signature="e#6041#11034#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -213,8 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,6 +291,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,7 +402,8 @@
       <workItem from="1494930717539" duration="417000" />
       <workItem from="1495626828394" duration="3399000" />
       <workItem from="1496088548258" duration="808000" />
-      <workItem from="1496090019104" duration="1267000" />
+      <workItem from="1496090019104" duration="1871000" />
+      <workItem from="1496216730276" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1488547387164</created>
@@ -663,17 +664,24 @@
       <option name="project" value="LOCAL" />
       <updated>1496088952650</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="添加登录返回token">
+      <created>1496092316045</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1496092316045</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23928000" />
+    <option name="totallyTimeSpent" value="24667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2468017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1165,19 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
-          <folding>
-            <element signature="e#364#770#0#PHP" expanded="false" />
-            <element signature="e#773#1753#0#PHP" expanded="false" />
-            <element signature="e#1756#4915#0#PHP" expanded="false" />
-            <element signature="e#4918#5446#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/KaguyaConfig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1194,10 +1189,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3427">
+          <caret line="157" column="19" lean-forward="false" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
+          <folding>
+            <element signature="e#7035#11933#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controllers/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
+          <folding>
+            <element signature="e#364#770#0#PHP" expanded="false" />
+            <element signature="e#773#1753#0#PHP" expanded="false" />
+            <element signature="e#1756#4915#0#PHP" expanded="false" />
+            <element signature="e#4918#5446#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28911">
-          <caret line="2019" column="37" lean-forward="false" selection-start-line="2019" selection-start-column="37" selection-end-line="2019" selection-end-column="37" />
+        <state relative-caret-position="277">
+          <caret line="2020" column="22" lean-forward="false" selection-start-line="2020" selection-start-column="22" selection-end-line="2020" selection-end-column="22" />
           <folding>
             <element signature="e#35#66#0#PHP" expanded="true" />
             <element signature="e#951#14964#0#PHP" expanded="false" />
@@ -1221,25 +1239,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3427">
-          <caret line="157" column="19" lean-forward="false" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
-          <folding>
-            <element signature="e#7035#11933#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1371">
-          <caret line="106" column="34" lean-forward="false" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+        <state relative-caret-position="475">
+          <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
           <folding>
             <element signature="e#616#896#0#PHP" expanded="false" />
-            <element signature="e#3278#3895#0#PHP" expanded="false" />
-            <element signature="e#3901#5812#0#PHP" expanded="false" />
-            <element signature="e#5818#10811#0#PHP" expanded="false" />
+            <element signature="e#3501#4118#0#PHP" expanded="false" />
+            <element signature="e#4124#6035#0#PHP" expanded="false" />
+            <element signature="e#6041#11034#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
